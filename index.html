@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Empolyee Information Management System</h2>
+        <hr>
+        <div class="toolBar">
+            <input type="button" value="Add" class="btn greenbtn" onclick="openDialog()" >
+            <input type="button" value="Inverse" class="btn greenbtn" onclick="inverseSelect()" >
+            <input type="button" value="Batch Delete" class="btn" onclick="batchDelete()" >
+        </div>
+
+        <table class="table">
+            <tr>
+                <th><input type="checkbox" name="chk" onclick="doSelectAll(this)">all</th>
+                <th>Index</th>
+                <th>Id No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>E-mail</th>
+                <th>Department</th>
+                <th>Delete</th>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>1</td>
+                <td>I001</td>
+                <td>Jack</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>2508867340</td>
+                <td>jack0423@gmail.com</td>
+                <td>IT</td>
+                <td><input class="btn" type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr> 
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>2</td>
+                <td>I021</td>
+                <td>Terry</td>
+                <td>27</td>
+                <td>Male</td>
+                <td>2648445500</td>
+                <td>terre0as5d@gmail.com</td>
+                <td>IT</td>
+                <td><input class="btn" type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr> 
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>3</td>
+                <td>H002</td>
+                <td>Chris</td>
+                <td>24</td>
+                <td>Male</td>
+                <td>2503756680</td>
+                <td>chiris_3233@gmail.com</td>
+                <td>HR</td>
+                <td><input class="btn"  type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>4</td>
+                <td>P001</td>
+                <td>Anna</td>
+                <td>25</td>
+                <td>Female</td>
+                <td>2503820663</td>
+                <td>Anna_0663@gmail.com</td>
+                <td>Marketing</td>
+                <td><input class="btn"  type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>5</td>
+                <td>M031</td>
+                <td>Steve</td>
+                <td>30</td>
+                <td>Male</td>
+                <td>2503820527</td>
+                <td>steve_0527@gmail.com</td>
+                <td>Management</td>
+                <td><input class="btn"  type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td>6</td>
+                <td>S0A1</td>
+                <td>Jessica</td>
+                <td>26</td>
+                <td>Female</td>
+                <td>2505070633</td>
+                <td>jess_ad23@gmail.com</td>
+                <td>Service</td>
+                <td><input class="btn"  type="button" value="Delete" onclick="doDelete(this)"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="addNew">
+        <div class="dialogBody">
+            <div class="dialogTitle">
+                <label>Add emplyee information</label>
+                <span onclick="closeDialog()">X</span>
+            </div>
+            <form class="addForm">
+                <p>
+                    <label>Name:</label>
+                    <input id="employeeName">
+                    <span class="errorTip">Name is not entered!</span>
+                </p>
+ 
+                <p>
+                    <label>Id Number:</label>
+                    <input id="employeeId">
+                    <span class="errorTip">Id No. is not entered!</span>
+                </p>
+
+                <p>
+                    <label>Age:</label>
+                    <input id="employeeAge">
+                    <span class="errorTip">Age is 18~70!</span>
+                </p>
+
+                <p>
+                    <label>Gender:</label>
+                    <select id="employGender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Undefined">Undefined</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Phone:</label>
+                    <input id="employeeTel">
+                    <span class="errorTip">invalid number!
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            (Ex.2501231234)</span>
+                </p>
+
+                <p>
+                    <label>E-mail:</label>
+                    <input id="employeeEmail">
+                    <span class="errorTip">Invalid e-mail!</span>
+                </p>
+
+                <p>
+                    <label>Department:</label>
+                    <input id="employeeDe">
+                    <span class="errorTip">Department is not entered!</span>
+                </p>
+
+                <input type="button" class="btn greenbtn savebtn" value="Save" onclick="save()">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

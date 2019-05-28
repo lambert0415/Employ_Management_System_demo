@@ -1,0 +1,119 @@
+html,body,div,p,label,form,table,tr,td,th,input,select,textarea,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+
+.container{
+    width: 900px;
+    border: 0px solid black;
+    margin: 10px auto;
+}
+
+h2{
+    text-align: center;
+    color:gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toolBar{
+    margin-bottom: 10px;
+}
+
+#addNew{
+    position: absolute;left:0;top:0;width: 100%;height: 100%;
+    background: -webkit-linear-gradient(bottom, rgba(3, 34, 59, 0.6),rgba(150, 156, 160, 0.6));
+    display: none;
+
+}
+
+.dialogBody{
+    border: 2px solid rgba(130, 147, 163, 0.836);
+    width: 450px;
+    height: 400px;
+    position: absolute;left:50%;top:50%;
+    margin-left:-225px;
+    margin-top:-200px;
+    background:-webkit-radial-gradient(rgb(252, 252, 252),#c8f1fdec);
+    box-shadow: hsla(182, 90%, 62%, 0.404) 3px 3px 10px;
+    border-radius: 15px; overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.dialogTitle{
+    height: 20px;
+    border-bottom: 2px solid rgba(91, 173, 250, 0.877);
+    padding: 10px;
+    background:-webkit-linear-gradient(bottom,#ebe7e7e1,#dcf5fdec);
+    border-radius: 15px;
+    box-shadow: hsla(204, 86%, 86%, 0.678) 3px 3px 10px;
+    overflow: hidden;
+}
+
+.dialogTitle label{float: left; text-shadow: rgb(177, 228, 248) 3px 3px 5px;}
+.dialogTitle span{float: right;cursor: pointer; color: red; font-weight: bold; text-shadow:rgb(190, 229, 245) 3px 3px 6px;}
+
+.btn{
+    width: 82px;
+    height: 27px;
+    font-weight: bold;
+    color: azure;
+    background: -webkit-linear-gradient(bottom, rgb(253, 58, 9),rgb(248, 117, 9));
+    border: 1px solid rgb(255, 47, 168);
+    border-radius: 10px;
+    box-shadow: hsla(182, 98%, 47%, 0.493) 4px 4px 6px;
+    cursor: pointer;
+}
+
+.greenbtn{
+    border: 1px solid #2f90ffc0;
+    background: -webkit-linear-gradient(bottom, rgb(0, 150, 125),rgb(11, 134, 0));
+    cursor: pointer;
+}
+
+.table{
+    border:2px solid lightslategray;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+    box-shadow: hsla(219, 100%, 57%, 0.493) 3px 3px 5px;
+}
+
+.table td, .table th{
+    border:1px solid lightslategray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.table th{
+    background: -webkit-linear-gradient(top left, lightblue,skyblue);
+    text-shadow: whitesmoke 5px 5px 8px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: indigo;
+    
+}
+
+.table tr{height:35px}
+.table tr:nth-child(odd){background: -webkit-linear-gradient(top left, rgba(227, 242, 247, 0.856),rgba(218, 227, 245, 0.747));}
+
+.addForm label{
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+}
+
+.addForm p{
+    margin:16px 0;
+}
+
+.addForm .errorTip{
+    color: crimson;
+    font-size: 14px;
+    font-style: italic;
+    display: none;
+}
+
+.addForm .savebtn{
+    display: block;
+    width: 50%;
+    height:35px;
+    margin: 25px auto;
+}
